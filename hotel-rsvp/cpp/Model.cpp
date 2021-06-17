@@ -2,7 +2,7 @@
 #include "Hotel.h"
 #include "Client.h"
 
-Response Response::best_price(std::vector<Hotel_h::Hotel> hotels, Client client) {
+Response Response::best_price(std::vector<Hotel>& hotels, const Client& client) {
     Response result = Response();
 
     for (Hotel hotel: hotels) {

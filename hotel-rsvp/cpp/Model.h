@@ -26,7 +26,7 @@ struct Response {
     }
 
     void update(
-        std::string name,
+        const std::string& name,
         unsigned int rate,
         unsigned long price) 
     {
@@ -41,9 +41,9 @@ struct Response {
         }
     }
 
-    Response best_price(std::vector<Hotel> hotel, Client client);
+    Response best_price(std::vector<Hotel>& hotel, const Client& client);
 
-    std::string name() {
+    std::string& name() {
         return name_;
     }
 
