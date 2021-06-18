@@ -16,12 +16,14 @@ set(sources
     Hotel.h
     Hotel.cpp
     Model.h 
-    Model.cpp)
+    Model.cpp
+    RSVP.h)
 
 set(testSources
     HotelTest.cpp
     ModelTest.cpp
-    ClientTest.cpp)
+    ClientTest.cpp
+    RSVPTest.cpp)
 
 add_executable(test ${testSources} ${sources})
 target_link_libraries(test  PRIVATE Threads::Threads GTest::gmock GTest::gtest GTest::gmock_main GTest::gtest_main)
