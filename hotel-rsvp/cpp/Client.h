@@ -23,18 +23,6 @@ enum Days
     Sun = 6,
 };
 
-class UnknownDayOfTheWeek
-{
-public:
-    UnknownDayOfTheWeek(){};
-};
-
-class UnknownClient
-{
-public:
-    UnknownClient(){};
-};
-
 struct Client
 {
     std::vector<Days> days_;

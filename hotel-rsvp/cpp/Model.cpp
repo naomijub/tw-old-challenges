@@ -1,6 +1,7 @@
 #include "Model.h"
 #include "Hotel.h"
 #include "Client.h"
+#include "Exceptions.h"
 
 Response Response::best_price(std::vector<Hotel> &hotels, const Client &client)
 {

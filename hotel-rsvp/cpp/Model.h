@@ -54,10 +54,4 @@ public:
     }
 };
 
-class ErrorFindingBestHotel
-{
-public:
-    ErrorFindingBestHotel() {}
-};
-
 #endif

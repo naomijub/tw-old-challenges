@@ -1,4 +1,5 @@
 #include "Client.h"
+#include "Exceptions.h"
 
 ClientType parse_client_type(const std::string &client_type_input);
 std::vector<Days> parse_client_days(const std::string &client_days_input);

@@ -10,6 +10,7 @@ set(CMAKE_CXX_FLAGS "${CMAXE_CXX_FLAGS} -Wall")
 
 
 set(sources
+    Exceptions.h
     Client.h
     Client.cpp
     Hotel.h
