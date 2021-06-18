@@ -11,6 +11,7 @@ set(CMAKE_CXX_FLAGS "${CMAXE_CXX_FLAGS} -Wall")
 
 set(sources
     Client.h
+    Client.cpp
     Hotel.h
     Hotel.cpp
     Model.h 
@@ -18,7 +19,8 @@ set(sources
 
 set(testSources
     HotelTest.cpp
-    ModelTest.cpp)
+    ModelTest.cpp
+    ClientTest.cpp)
 
 add_executable(test ${testSources} ${sources})
 target_link_libraries(test  PRIVATE Threads::Threads GTest::gmock GTest::gtest GTest::gmock_main GTest::gtest_main)

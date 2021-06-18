@@ -2,13 +2,18 @@
 #define Client_h
 
 #include <vector>
+#include <string>
+#include <sstream>
+#include <functional>
 
-enum ClientType {
+enum ClientType
+{
     Regular,
     Rewards,
 };
 
-enum Days {
+enum Days
+{
     Mon = 0,
     Tues = 1,
     Wed = 2,
@@ -18,13 +23,30 @@ enum Days {
     Sun = 6,
 };
 
-struct Client {
+class UnknownDayOfTheWeek
+{
+public:
+    UnknownDayOfTheWeek(){};
+};
+
+class UnknownClient
+{
+public:
+    UnknownClient(){};
+};
+
+struct Client
+{
     std::vector<Days> days_;
     ClientType type_;
-    
-    public: 
-        Client(ClientType client_type, std::vector<Days> days) : days_(days), type_(client_type) {};
 
+public:
+    Client(ClientType client_type, std::vector<Days> days) : days_(days), type_(client_type){};
+    Client(){};
+
+    void parse_input(const std::string input);
 };
+
+bool operator==(const Client &lhs, const Client &rhs);
 
 #endif

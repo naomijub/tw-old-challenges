@@ -2,15 +2,18 @@
 #include "Hotel.h"
 #include "Client.h"
 
-Response Response::best_price(std::vector<Hotel>& hotels, const Client& client) {
+Response Response::best_price(std::vector<Hotel> &hotels, const Client &client)
+{
     Response result = Response();
 
-    for (Hotel hotel: hotels) {
+    for (Hotel hotel : hotels)
+    {
         auto price = hotel.price(client);
         result.update(hotel.name(), hotel.rate(), price);
     }
 
-    if (result.name_.empty()) {
+    if (result.name_.empty())
+    {
         throw ErrorFindingBestHotel();
     }
 
